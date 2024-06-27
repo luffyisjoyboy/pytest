@@ -16,3 +16,6 @@ class TestCircle:
     def test_perimeter(self):
         result = self.circle.perimeter()
         assert result == 2 * math.pi * self.circle.radius
+
+    def test_not_same_area_rectangle(self, my_rectangle):
+        assert self.circle.area() != my_rectangle.area()

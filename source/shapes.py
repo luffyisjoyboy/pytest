@@ -18,3 +18,20 @@ class Circle(Shape):
 
     def perimeter(self):
         return 2 * math.pi * self.radius
+
+
+class Rectangle(Shape):
+    def __init__(self, length, width) -> None:
+        self.length = length
+        self.width = width
+
+    def __eq__(self, value: object) -> bool:
+        if not isinstance(value, Rectangle):
+            return False
+        return self.width == value.width and self.length == value.length
+
+    def area(self):
+        return self.length * self.width
+
+    def perimeter(self):
+        return 2 * (self.length + self.width)
